@@ -41,6 +41,15 @@ public class LoginPageTest extends BaseTest{
 	public void forgotPwdLinkTest() {
 		Assert.assertTrue(loginPage.isForgotPwdLinkExist());
 	}
+
+
+	@Description("check checkbox Test.....")
+	@Severity(SeverityLevel.CRITICAL)
+	@Test
+	public void checkBoxTest() {
+		//Assert.assertEquals(1,1);
+		Assert.assertEquals(loginPage.CountCheckBoxes(), 1);
+	}
 	
 	@Test
 	@Description("login Title Test with correct username and correct password.....")
@@ -50,8 +59,10 @@ public class LoginPageTest extends BaseTest{
 		Thread.sleep(5000);
 		Assert.assertTrue(homePage.isAccountsPageHeaderExist());
 	}
+
+
 	
-	
+
 	/*@Test
 	@Description("Register link Test.....")
 	@Severity(SeverityLevel.CRITICAL)

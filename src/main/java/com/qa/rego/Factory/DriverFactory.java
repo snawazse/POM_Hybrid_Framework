@@ -109,7 +109,7 @@ public class DriverFactory {
 	 */
 	private void init_remoteWebDriver(String browserName) {
 
-		System.out.println("Runnng test cases on remote grid server: " + browserName);
+		System.out.println("Running test cases on remote grid server: " + browserName);
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 			try {

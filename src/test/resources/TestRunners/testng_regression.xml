@@ -9,7 +9,6 @@
 			class-name="com.qa.rego.Listeners.ExtentReportListener" />
 		<listener
 			class-name="com.qa.rego.Listeners.TestAllureListener" />
-
 		<listener
 			class-name="com.qa.rego.Listeners.AnnotationTransformer" />
 
@@ -23,16 +22,14 @@
 		</classes>
 	</test>
 
-<!--
-	 <test name="Open Cart Accounts Page Test : Edge- 95">
+<!--	 <test name="Open Cart Accounts Page Test : Edge- 95">
 		<parameter name="browser" value="edge" />
 		<parameter name="browserversion" value="95.0" />
 		<classes>
 			<class name="com.qa.rego.Tests.HomePageTest" />
 		</classes>
-	</test> 
-	-->
-	
+	</test> -->
+
 <!--
 	<test name="Open Cart Login Page Negative Test: Firefox- 90">
 		<parameter name="browser" value="firefox" />

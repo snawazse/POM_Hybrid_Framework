@@ -3,6 +3,7 @@ package com.qa.rego.Pages;
 import java.util.ArrayList;
 import java.util.List;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

@@ -8,6 +8,8 @@ import com.qa.rego.Utils.ElementUtil;
 
 import io.qameta.allure.Step;
 
+import java.util.List;
+
 public class LoginPage {
 
 	private final WebDriver driver;
@@ -44,6 +46,16 @@ public class LoginPage {
 	@Step("checking that forgot pwd link is displayed or not.....")
 	public boolean isForgotPwdLinkExist() {
 		return eleutil.doIsDisplayed(forgotPwd);
+	}
+	/*@Step("Checking no of text boxes....")
+	public int CountCheckBoxes() {
+		int countedCheckBoxes = driver.findElements(By.xpath("//input[@type='checkbox']")).size();
+		return countedCheckBoxes;
+	}*/
+
+	@Step("Checking no of text boxes....")
+	public int CountCheckBoxes() {
+		return eleutil.checkBoxCount();
 	}
 
 	@Step("login to application with correct username {0} and password {1}")

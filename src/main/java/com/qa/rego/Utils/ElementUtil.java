@@ -24,7 +24,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.qa.rego.Exceptions.ElementUtilException;
 import com.qa.rego.Factory.DriverFactory;
 
-public class ElementUtil {
+public class ElementUtil<WebElements> {
 
 	private final WebDriver driver;
 	private final JavaScriptUtil jsUtil;
@@ -120,6 +120,12 @@ public class ElementUtil {
 
 	public boolean doIsEnabled(By locator) {
 		return getElement(locator).isEnabled();
+	}
+
+	public int checkBoxCount(){
+		int countedCheckBoxes = driver.findElements(By.xpath("//input[@type='checkbox']")).size();
+		return countedCheckBoxes;
+
 	}
 
 	public List<String> getLinksTextList(By locator) {
@@ -561,5 +567,7 @@ public class ElementUtil {
 
 		return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
 	}
+
+
 
 }
