@@ -30,12 +30,12 @@ public class LoginPageNegativeTest extends BaseTest{
 	}
 	
 	
-	@Test(dataProvider = "getLoginNegativeData")
-	@Description("login Title Test with invalid credentials.....")
-	@Severity(SeverityLevel.NORMAL)
-	public void loginInvalidTest(String username, String password) {
-		Assert.assertTrue(loginPage.doInvalidLogin(username, password), Errors.LOGIN_PAGE_ERROR_MESSG_NOT_DISPLAYED);
-	}
+//	@Test(dataProvider = "getLoginNegativeData")
+//	@Description("login Title Test with invalid credentials.....")
+//	@Severity(SeverityLevel.NORMAL)
+//	public void loginInvalidTest(String username, String password) {
+//		Assert.assertTrue(loginPage.doInvalidLogin(username, password), Errors.LOGIN_PAGE_ERROR_MESSG_NOT_DISPLAYED);
+//	}
 	
 //	@Test
 //	public void test1() {

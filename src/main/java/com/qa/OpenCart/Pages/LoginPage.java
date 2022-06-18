@@ -16,10 +16,10 @@ public class LoginPage {
 	private ElementUtil eleutil;
 
 	// 1. private by locators:
-	private By emailId = By.id("input-email");
-	private By password = By.id("input-password");
-	private By loginBtn = By.xpath("//input[@value='Login']");
-	private By forgotPwd = By.linkText("Forgotten Password");
+	private By emailId = By.xpath("//input[@id='email']");
+	private By password = By.xpath("//input[@id='password']");
+	private By loginBtn = By.xpath("//button[contains(text(),'Submit')]");
+	private By forgotPwd = By.linkText("Forgot password?");
 	private By registerLink = By.linkText("Register");
 	private By logout = By.linkText("Logout");
 
@@ -56,7 +56,7 @@ public class LoginPage {
 		return new AccountsPage(driver);
 	}
 	
-	@Step("login to application with correct username {0} and password {1}")
+	/*@Step("login to application with correct username {0} and password {1}")
 	public boolean doInvalidLogin(String un, String pwd) {
 		WebElement email_ele = eleutil.waitForElementToBeVisible(emailId, Constants.DEFAULT_TIME_OUT);
 		email_ele.clear();
@@ -86,6 +86,6 @@ public class LoginPage {
 		}
 		return null;
 	}
-	
+	*/
 
 }

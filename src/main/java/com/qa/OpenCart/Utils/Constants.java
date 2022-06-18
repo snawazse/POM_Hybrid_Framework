@@ -9,8 +9,8 @@ public class Constants {
 
 	public static final String DEMO_PAGE_TITLE = "Account DEMO";
 
-	public static final String LOGIN_PAGE_TITLE = "Account Login";
-	public static final String LOGIN_PAGE_FRACTION_URL = "route=account/login";
+	public static final String LOGIN_PAGE_TITLE = "REGO";
+	public static final String LOGIN_PAGE_FRACTION_URL = "/login";
 	public static final String ACCOUNTS_PAGE_TITLE = "My Account";
 	
 	public static final List<String> ACCOUNTS_SECTIONS_LIST = Arrays.asList("My Account", 

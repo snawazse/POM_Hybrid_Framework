@@ -13,11 +13,11 @@ import com.qa.OpenCart.Utils.ExcelUtil;
 
 public class RegistrationPageTest extends BaseTest{
 	
-	@BeforeClass
+	/*@BeforeClass
 	public void regPageSetup() {
 		registrationPage = loginPage.navigateToRegisterPage();
 	}
-	
+	*/
 	
 	public String getRandomEmail() {
 		Random random = new Random();

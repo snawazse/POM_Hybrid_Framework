@@ -51,12 +51,12 @@ public class LoginPageTest extends BaseTest{
 	}
 	
 	
-	@Test
+	/*@Test
 	@Description("Register link Test.....")
 	@Severity(SeverityLevel.CRITICAL)
 	public void isRegisterLinkExist() {
 		Assert.assertTrue(loginPage.isRegisterLinkExist());
 	}
-	
+	*/
 
 }
