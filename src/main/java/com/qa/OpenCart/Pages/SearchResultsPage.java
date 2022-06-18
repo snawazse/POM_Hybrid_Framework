@@ -14,10 +14,10 @@ import io.qameta.allure.Step;
 
 public class SearchResultsPage {
 
-	private WebDriver driver;
-	private ElementUtil eleUtil;
-	private By searchHeader = By.cssSelector("div#content h1");
-	private By products = By.cssSelector("div.caption a");
+	private final WebDriver driver;
+	private final ElementUtil eleUtil;
+	private final By searchHeader = By.cssSelector("div#content h1");
+	private final By products = By.cssSelector("div.caption a");
 
 	public SearchResultsPage(WebDriver driver) {
 		this.driver = driver;

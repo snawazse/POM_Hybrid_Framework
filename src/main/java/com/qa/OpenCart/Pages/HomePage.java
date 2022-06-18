@@ -10,17 +10,18 @@ import org.openqa.selenium.WebElement;
 import com.qa.OpenCart.Utils.Constants;
 import com.qa.OpenCart.Utils.ElementUtil;
 
-public class AccountsPage {
+public class HomePage {
 	
-	private WebDriver driver;
-	private ElementUtil eleUtil;
+	private final WebDriver driver;
+	private final ElementUtil eleUtil;
 	
-	private By search = By.name("search");
-	private By searchBtn = By.cssSelector("div#search button");
-	private By header = By.cssSelector("div#logo a");
-	private By accSecList = By.cssSelector("div#content h2");
+	private final By search = By.name("search");
+	private final By searchBtn = By.cssSelector("div#search button");
+	private final By header = By.xpath("//img[@alt='rego logo']");
+	private final By accSecList = By.cssSelector("div#content h2");
+	private final By signOut=By.xpath("//span[normalize-space()='Sign Out']");
 	
-	public AccountsPage(WebDriver driver) {
+	public HomePage(WebDriver driver) {
 		this.driver = driver;
 		eleUtil = new ElementUtil(driver);
 	}
@@ -30,7 +31,7 @@ public class AccountsPage {
 	}
 	
 	public boolean isAccountsPageHeaderExist() {
-		return eleUtil.doIsDisplayed(header);
+		return eleUtil.doIsDisplayed(signOut);
 	}
 	
 	public boolean isSearchExist() {

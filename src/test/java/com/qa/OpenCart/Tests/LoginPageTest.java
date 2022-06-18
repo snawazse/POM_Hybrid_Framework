@@ -45,9 +45,10 @@ public class LoginPageTest extends BaseTest{
 	@Test
 	@Description("login Title Test with correct username and correct password.....")
 	@Severity(SeverityLevel.BLOCKER)
-	public void loginTest() {
-		accPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
-		Assert.assertTrue(accPage.isAccountsPageHeaderExist());
+	public void loginTest() throws InterruptedException {
+		homePage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		Thread.sleep(5000);
+		Assert.assertTrue(homePage.isAccountsPageHeaderExist());
 	}
 	
 	

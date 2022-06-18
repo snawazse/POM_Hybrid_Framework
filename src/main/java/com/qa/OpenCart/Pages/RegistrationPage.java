@@ -8,22 +8,22 @@ import com.qa.OpenCart.Utils.ElementUtil;
 
 public class RegistrationPage {
 
-	private WebDriver driver;
-	private ElementUtil eleutil;
+	private final WebDriver driver;
+	private final ElementUtil eleutil;
 
-	private By firstName = By.id("input-firstname");
-	private By lastName = By.id("input-lastname");
-	private By email = By.id("input-email");
-	private By telephone = By.id("input-telephone");
-	private By password = By.id("input-password");
-	private By confirmpassword = By.id("input-confirm");
-	private By subscribeYes = By.xpath("//label[@class='radio-inline']//input[@type='radio' and @value = '1']");
-	private By subscribeNo = By.xpath("//label[@class='radio-inline']//input[@type='radio' and @value = '0']");
-	private By agreeCheckBox = By.name("agree");
-	private By continueBtn = By.xpath("//input[@type='submit' and @value='Continue']");
-	private By sucessMessg = By.cssSelector("div#content h1");
-	private By logoutLink = By.linkText("Logout");
-	private By registerLink = By.linkText("Register");
+	private final By firstName = By.id("input-firstname");
+	private final By lastName = By.id("input-lastname");
+	private final By email = By.id("input-email");
+	private final By telephone = By.id("input-telephone");
+	private final By password = By.id("input-password");
+	private final By confirmpassword = By.id("input-confirm");
+	private final By subscribeYes = By.xpath("//label[@class='radio-inline']//input[@type='radio' and @value = '1']");
+	private final By subscribeNo = By.xpath("//label[@class='radio-inline']//input[@type='radio' and @value = '0']");
+	private final By agreeCheckBox = By.name("agree");
+	private final By continueBtn = By.xpath("//input[@type='submit' and @value='Continue']");
+	private final By sucessMessg = By.cssSelector("div#content h1");
+	private final By logoutLink = By.linkText("Logout");
+	private final By registerLink = By.linkText("Register");
 
 	public RegistrationPage(WebDriver driver) {
 		this.driver = driver;

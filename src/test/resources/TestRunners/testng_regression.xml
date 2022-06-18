@@ -28,7 +28,7 @@
 		<parameter name="browser" value="edge" />
 		<parameter name="browserversion" value="95.0" />
 		<classes>
-			<class name="com.qa.OpenCart.Tests.AccountsPageTest" />
+			<class name="com.qa.OpenCart.Tests.HomePageTest" />
 		</classes>
 	</test> 
 	-->

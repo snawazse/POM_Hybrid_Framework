@@ -17,7 +17,7 @@ public class ExcelUtil {
 	private static Sheet sheet;
 
 	public static Object[][] getTestData(String sheetName) {
-		Object data[][] = null;
+		Object[][] data = null;
 
 		try {
 			FileInputStream ip = new FileInputStream(Constants.TEST_DATA_SHEET_PATH);

@@ -2,28 +2,26 @@ package com.qa.OpenCart.Pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import com.qa.OpenCart.Utils.Constants;
 import com.qa.OpenCart.Utils.ElementUtil;
-import com.qa.OpenCart.Utils.Errors;
 
 import io.qameta.allure.Step;
 
 public class LoginPage {
 
-	private WebDriver driver;
-	private ElementUtil eleutil;
+	private final WebDriver driver;
+	private final ElementUtil eleutil;
 
 	// 1. private by locators:
-	private By emailId = By.xpath("//input[@id='email']");
-	private By password = By.xpath("//input[@id='password']");
-	private By loginBtn = By.xpath("//button[contains(text(),'Submit')]");
-	private By forgotPwd = By.linkText("Forgot password?");
-	private By registerLink = By.linkText("Register");
-	private By logout = By.linkText("Logout");
+	private final By emailId = By.xpath("//input[@id='email']");
+	private final By password = By.xpath("//input[@id='password']");
+	private final By loginBtn = By.xpath("//button[contains(text(),'Submit')]");
+	private final By forgotPwd = By.linkText("Forgot password?");
+	private final By registerLink = By.linkText("Register");
+	private final By logout = By.linkText("Logout");
 
-	private By loginErrorMessg = By.cssSelector("div.alert.alert-danger.alert-dismissible");
+	private final By loginErrorMessg = By.cssSelector("div.alert.alert-danger.alert-dismissible");
 
 
 	// 2. public page const....
@@ -49,11 +47,12 @@ public class LoginPage {
 	}
 
 	@Step("login to application with correct username {0} and password {1}")
-	public AccountsPage doLogin(String un, String pwd) {
-		eleutil.waitForElementToBeVisible(emailId, Constants.DEFAULT_TIME_OUT).sendKeys(un);
+	public HomePage doLogin(String un, String pwd) {
+		//eleutil.waitForElementToBeVisible(emailId, Constants.DEFAULT_TIME_OUT).sendKeys(un);
+		eleutil.doSendKeys(emailId, un);
 		eleutil.doSendKeys(password, pwd);
 		eleutil.doClick(loginBtn);
-		return new AccountsPage(driver);
+		return new HomePage(driver);
 	}
 	
 	/*@Step("login to application with correct username {0} and password {1}")

@@ -9,7 +9,7 @@ import org.testng.annotations.Parameters;
 import org.testng.asserts.SoftAssert;
 
 import com.qa.OpenCart.Factory.DriverFactory;
-import com.qa.OpenCart.Pages.AccountsPage;
+import com.qa.OpenCart.Pages.HomePage;
 import com.qa.OpenCart.Pages.LoginPage;
 import com.qa.OpenCart.Pages.ProductInfoPage;
 import com.qa.OpenCart.Pages.RegistrationPage;
@@ -27,7 +27,7 @@ public class BaseTest {
 	public Properties prop;
 	public WebDriver driver;
 	public LoginPage loginPage;
-	public AccountsPage accPage;
+	public HomePage homePage;
 	public SearchResultsPage searchResultsPage;
 	public ProductInfoPage productInfoPage;
 	public RegistrationPage registrationPage;

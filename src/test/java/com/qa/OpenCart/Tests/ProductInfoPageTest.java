@@ -16,7 +16,7 @@ public class ProductInfoPageTest extends BaseTest{
 	
 	@BeforeClass
 	public void productInfoSetup() {
-		accPage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
+		homePage = loginPage.doLogin(prop.getProperty("username"), prop.getProperty("password"));
 	}
 	
 //	@DataProvider
@@ -30,27 +30,27 @@ public class ProductInfoPageTest extends BaseTest{
 	
 	@DataProvider
 	public Object[][] getProductData(){
-		Object productData[][] = ExcelUtil.getTestData(Constants.PRODUCT_SHEET_NAME);
+		Object[][] productData = ExcelUtil.getTestData(Constants.PRODUCT_SHEET_NAME);
 		return productData;
 	}
 	
 	@Test(dataProvider = "getProductData")
 	public void productInfoHeaderTest(String productName, String mainProductName) {
-		searchResultsPage = accPage.doSearch(productName);
+		searchResultsPage = homePage.doSearch(productName);
 		productInfoPage = searchResultsPage.selectProduct(mainProductName);
 		Assert.assertEquals(productInfoPage.getProductHeaderText(), mainProductName);
 	}
 	
 	@Test
 	public void productImagesTest() {
-		searchResultsPage = accPage.doSearch("MacBook");
+		searchResultsPage = homePage.doSearch("MacBook");
 		productInfoPage = searchResultsPage.selectProduct("MacBook Air");
 		Assert.assertTrue(productInfoPage.getPorductImagesCount() == Constants.MACBOOK_IMAGES_COUNT);
 	}
 	
 	@Test
 	public void productInfoTest() {
-		searchResultsPage = accPage.doSearch("MacBook");
+		searchResultsPage = homePage.doSearch("MacBook");
 		productInfoPage = searchResultsPage.selectProduct("MacBook Pro");
 		Map<String, String> actProductInfoMap = productInfoPage.getProductInfo();
 		actProductInfoMap.forEach((k,v) -> System.out.println(k + ":" + v));

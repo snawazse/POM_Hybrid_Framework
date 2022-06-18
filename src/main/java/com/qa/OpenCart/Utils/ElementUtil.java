@@ -26,8 +26,8 @@ import com.qa.OpenCart.Factory.DriverFactory;
 
 public class ElementUtil {
 
-	private WebDriver driver;
-	private JavaScriptUtil jsUtil;
+	private final WebDriver driver;
+	private final JavaScriptUtil jsUtil;
 	public static final Logger log = Logger.getLogger(ElementUtil.class);
 
 	public ElementUtil(WebDriver driver) {
@@ -111,10 +111,7 @@ public class ElementUtil {
 	}
 
 	public boolean isElementPresent(By locator) {
-		if (getElements(locator).size() > 0) {
-			return true;
-		}
-		return false;
+		return getElements(locator).size() > 0;
 	}
 
 	public boolean doIsDisplayed(By locator) {
@@ -469,7 +466,7 @@ public class ElementUtil {
 			} catch (NoSuchElementException e) {
 				System.out.println("element is not found in attempt : " + attempts + ":" + locator);
 				try {
-					Thread.sleep(500);// default interval time
+					Thread.sleep(1000);// default interval time
 				} catch (InterruptedException e1) {
 					e1.printStackTrace();
 				}

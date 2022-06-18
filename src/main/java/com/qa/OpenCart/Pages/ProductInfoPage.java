@@ -13,16 +13,16 @@ import com.qa.OpenCart.Utils.ElementUtil;
 
 public class ProductInfoPage {
 
-	private WebDriver driver;
-	private ElementUtil eleUtil;
+	private final WebDriver driver;
+	private final ElementUtil eleUtil;
 
-	private By productHeader = By.cssSelector("div#content h1");
-	private By productImages = By.cssSelector("div#content img");
-	private By productMetaData = By.cssSelector("div#content ul.list-unstyled:nth-of-type(1) li");
-	private By productPriceData = By.cssSelector("div#content ul.list-unstyled:nth-of-type(2) li");
-	private By qty = By.id("input-quantity");
-	private By addToCartBtn = By.id("button-cart");
-	private By successMessg = By.cssSelector("div.alert.alert-success.alert-dismissible");
+	private final By productHeader = By.cssSelector("div#content h1");
+	private final By productImages = By.cssSelector("div#content img");
+	private final By productMetaData = By.cssSelector("div#content ul.list-unstyled:nth-of-type(1) li");
+	private final By productPriceData = By.cssSelector("div#content ul.list-unstyled:nth-of-type(2) li");
+	private final By qty = By.id("input-quantity");
+	private final By addToCartBtn = By.id("button-cart");
+	private final By successMessg = By.cssSelector("div.alert.alert-success.alert-dismissible");
 
 	private Map<String, String> productInfoMap;
 
@@ -56,7 +56,7 @@ public class ProductInfoPage {
 //		Availability: Out Of Stock
 		for (WebElement e : metaDataList) {
 			String text = e.getText().trim();
-			String meta[] = text.split(":");
+			String[] meta = text.split(":");
 			String metaKey = meta[0].trim();
 			String metaValue = meta[1].trim();
 			productInfoMap.put(metaKey, metaValue);

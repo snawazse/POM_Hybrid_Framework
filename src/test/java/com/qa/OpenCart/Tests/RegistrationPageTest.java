@@ -36,7 +36,7 @@ public class RegistrationPageTest extends BaseTest{
 	
 	@DataProvider
 	public Object[][] getRegisterData() {
-		Object regData[][] = ExcelUtil.getTestData(Constants.REGISTER_SHEET_NAME);
+		Object[][] regData = ExcelUtil.getTestData(Constants.REGISTER_SHEET_NAME);
 		return regData;
 	}
 	
