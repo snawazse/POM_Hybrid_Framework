@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Open Cart Test Suite" verbose="4" thread-count="4"
+<suite name="Rego Test Suite" verbose="4" thread-count="4"
 	parallel="tests">
 
 	<listeners>
 		<listener
-			class-name="com.qa.OpenCart.Listeners.ExtentReportListener" />
+			class-name="com.qa.rego.Listeners.ExtentReportListener" />
 		<listener
-			class-name="com.qa.OpenCart.Listeners.TestAllureListener" />
+			class-name="com.qa.rego.Listeners.TestAllureListener" />
 
 		<listener
-			class-name="com.qa.OpenCart.Listeners.AnnotationTransformer" />
+			class-name="com.qa.rego.Listeners.AnnotationTransformer" />
 
 	</listeners>
 
-	<test name="Open Cart Login Page Test _ Chrome-100">
+	<test name="Rego App Login Page Test _ Chrome-100">
 		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="100.0" />
 		<classes>
-			<class name="com.qa.OpenCart.Tests.LoginPageTest" />
+			<class name="com.qa.rego.Tests.LoginPageTest" />
 		</classes>
 	</test>
 
@@ -28,7 +28,7 @@
 		<parameter name="browser" value="edge" />
 		<parameter name="browserversion" value="95.0" />
 		<classes>
-			<class name="com.qa.OpenCart.Tests.HomePageTest" />
+			<class name="com.qa.rego.Tests.HomePageTest" />
 		</classes>
 	</test> 
 	-->
@@ -38,7 +38,7 @@
 		<parameter name="browser" value="firefox" />
 		<parameter name="browserversion" value="90.0" />
 		<classes>
-			<class name="com.qa.OpenCart.Tests.LoginPageNegativeTest" />
+			<class name="com.qa.rego.Tests.LoginPageNegativeTest" />
 		</classes>
 	</test>
 -->
@@ -48,7 +48,7 @@
 		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="100.0" />
 		<classes>
-			<class name="com.qa.OpenCart.Tests.ProductInfoPageTest" />
+			<class name="com.qa.rego.Tests.ProductInfoPageTest" />
 		</classes>
 	</test>-->
 
@@ -56,7 +56,7 @@
 		<parameter name="browser" value="chrome" />
 		<parameter name="browserversion" value="100.0" />
 		<classes>
-			<class name="com.qa.OpenCart.Tests.RegistrationPageTest" />
+			<class name="com.qa.rego.Tests.RegistrationPageTest" />
 		</classes>
 	</test>-->
 
